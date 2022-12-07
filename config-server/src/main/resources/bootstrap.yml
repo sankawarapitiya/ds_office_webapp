@@ -7,16 +7,16 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/sankawarapitiya/microservice-config-server.git
+          uri: https://github.com/sankawarapitiya/ds_office_webapp_config.git
           search-paths:
             - '*config'
+        bootstrap: true
 #          username:
 #          password:
 
 #        vault:
 #          port: 8200
 #          host: localhost
-
 #spring.cloud.config.server.git.clone-on-start=true
 #eureka:
 #  instance:
