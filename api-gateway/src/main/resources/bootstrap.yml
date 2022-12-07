@@ -1,0 +1,21 @@
+server:
+  port: 9191
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+  application:
+    name:  API-GATEWAY
+
+
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true

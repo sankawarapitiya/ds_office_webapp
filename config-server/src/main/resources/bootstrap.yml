@@ -1,0 +1,38 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sankawarapitiya/microservice-config-server.git
+          search-paths:
+            - '*config'
+#          username:
+#          password:
+
+#        vault:
+#          port: 8200
+#          host: localhost
+
+#spring.cloud.config.server.git.clone-on-start=true
+#eureka:
+#  instance:
+#    instance-id: ${spring.application.name}:${random.uuid}
+#  #    prefer-ip-address: true
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+
+#eureka:
+#  instance:
+#    instance-id: ${spring.application.name}:${random.uuid}
+#    prefer-ip-address: true
+#    hostname: localhost
+#  client:
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+#    register-with-eureka: true
+#    fetch-registry: true
